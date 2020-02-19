@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchCategories } from "../store/actions/categoryAction";
 import Category from "./Category";
+import { Link } from "react-router-dom";
 
 class HomePage extends Component {
   componentDidMount() {
@@ -12,7 +13,13 @@ class HomePage extends Component {
     return (
       <div>
         {this.props.categories.map(category => (
-          <Category key={category.id} name={category.name} />
+          <Link to={`/category/${category.id}`}>
+            <Category
+              key={category.id}
+              name={category.name}
+              img={category.imageUrl}
+            />
+          </Link>
         ))}
       </div>
     );

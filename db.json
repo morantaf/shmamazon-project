@@ -164,19 +164,23 @@
   "categories": [
     {
       "id": 1,
-      "name": "Category 1"
+      "name": "Category 1",
+      "imageUrl": "https://picsum.photos/400?image=372"
     },
     {
       "id": 2,
-      "name": "Category 2"
+      "name": "Category 2",
+      "imageUrl": "https://picsum.photos/400?image=354"
     },
     {
       "id": 3,
-      "name": "Category 3"
+      "name": "Category 3",
+      "imageUrl": "https://picsum.photos/400?image=133"
     },
     {
       "id": 4,
-      "name": "Category 4"
+      "name": "Category 4",
+      "imageUrl": "https://i.picsum.photos/id/133/400/400.jpg"
     }
   ]
 }
