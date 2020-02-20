@@ -1,14 +1,21 @@
 const initialState = {
-  products: []
+  list: [],
+  selectedProduct: null
 };
 
-export default function categoriesReducer(
-  state = initialState.products,
-  action
-) {
+export default function productReducer(state = initialState, action) {
   switch (action.type) {
     case "FETCH_PRODUCTS": {
-      return action.payload;
+      return {
+        ...state,
+        list: action.payload
+      };
+    }
+    case "FETCH_PRODUCT_BY_ID": {
+      return {
+        ...state,
+        selectedProduct: action.payload
+      };
     }
     default: {
       return state;
