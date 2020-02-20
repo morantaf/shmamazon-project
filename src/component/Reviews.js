@@ -3,7 +3,12 @@ import { connect } from "react-redux";
 
 class Reviews extends Component {
   render() {
-    return <div>Reviews</div>;
+    return (
+      <div>
+        <p>{this.props.name} Says: </p>
+        <p>{this.props.comment}</p>
+      </div>
+    );
   }
 }
 

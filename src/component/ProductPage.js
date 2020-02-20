@@ -13,6 +13,7 @@ class ProductPage extends Component {
   render() {
     const product = this.props.product;
 
+    const productId = this.props.match.params.id;
     if (!product) {
       return <div>Loading...</div>;
     }
@@ -33,7 +34,16 @@ class ProductPage extends Component {
         </div>
         <div>
           <h1>Reviews</h1>
-          <Reviews />
+          {this.props.productReviews.length === 0
+            ? "No comment yet"
+            : this.props.productReviews.map(review => {
+                console.log("render review:", review);
+
+                return (
+                  <Reviews name={review.customerName} comment={review.review} />
+                );
+              })}
+
           <ReviewForm />
         </div>
       </div>
@@ -43,7 +53,8 @@ class ProductPage extends Component {
 
 function mapStateToProps(reduxState) {
   return {
-    product: reduxState.products.selectedProduct
+    product: reduxState.products.selectedProduct,
+    productReviews: reduxState.reviews.productReviews
   };
 }
 

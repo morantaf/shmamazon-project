@@ -1,26 +1,50 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { setReview } from "../store/actions/reviews";
 
 class ReviewForm extends Component {
   state = {
-    value: ""
+    comment: "",
+    name: ""
   };
 
-  handleChange(event) {
-    console.log(event.target.value);
-  }
+  handleCommentChange = event => {
+    this.setState({
+      comment: event.target.value
+    });
+  };
 
-  handleSubmit(event) {
+  handleNameChange = event => {
+    this.setState({
+      name: event.target.value
+    });
+  };
+
+  handleSubmit = event => {
     event.preventDefault();
-    alert("Un essai a été envoyé : " + this.state.value);
-  }
+    this.props.dispatch(setReview(this.state.comment, this.state.name));
+  };
 
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <h4>Add a comment:</h4>
-          <textarea value={this.state.value} onChange={this.handleChange} />
+          <label>
+            Name
+            <input
+              type="text"
+              value={this.state.name}
+              onChange={this.handleNameChange}
+            />
+          </label>
+          <label>
+            Comment
+            <textarea
+              value={this.state.comment}
+              onChange={this.handleCommentChange}
+            />
+          </label>
           <input type="submit" value="Submit" />
         </form>
       </div>
@@ -32,8 +56,4 @@ function mapStateToProps(reduxState) {
   return {};
 }
 
-function mapDispatchToProps() {
-  return {};
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);
+export default connect(mapStateToProps)(ReviewForm);
