@@ -1,9 +1,10 @@
-export function setReview(review, customerName) {
+export function setReview(review, customerName, productId) {
   return {
     type: "STORE_REVIEW",
     payload: {
       customerName: customerName,
-      review: review
+      review: review,
+      productId: productId
     }
   };
 }

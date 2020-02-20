@@ -22,7 +22,9 @@ class ReviewForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.dispatch(setReview(this.state.comment, this.state.name));
+    this.props.dispatch(
+      setReview(this.state.comment, this.state.name, this.props.productId)
+    );
   };
 
   render() {

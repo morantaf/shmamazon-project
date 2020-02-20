@@ -9,7 +9,8 @@ export default function reviewsReducer(state = initialState, action) {
         ...state,
         productReviews: state.productReviews.concat({
           customerName: action.payload.customerName,
-          review: action.payload.review
+          review: action.payload.review,
+          productId: action.payload.productId
         })
       };
     }

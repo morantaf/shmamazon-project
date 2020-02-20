@@ -12,8 +12,11 @@ class ProductPage extends Component {
 
   render() {
     const product = this.props.product;
+    const productId = parseInt(this.props.match.params.id);
+    const filteredProductReviews = this.props.productReviews.filter(
+      review => review.productId === productId
+    );
 
-    const productId = this.props.match.params.id;
     if (!product) {
       return <div>Loading...</div>;
     }
@@ -34,9 +37,9 @@ class ProductPage extends Component {
         </div>
         <div>
           <h1>Reviews</h1>
-          {this.props.productReviews.length === 0
+          {filteredProductReviews.length === 0
             ? "No comment yet"
-            : this.props.productReviews.map(review => {
+            : filteredProductReviews.map(review => {
                 console.log("render review:", review);
 
                 return (
@@ -44,7 +47,7 @@ class ProductPage extends Component {
                 );
               })}
 
-          <ReviewForm />
+          <ReviewForm productId={productId} />
         </div>
       </div>
     );
