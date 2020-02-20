@@ -10,6 +10,7 @@ class Product extends Component {
         <p>
           {this.props.price} {this.props.inStock}
         </p>
+        <button>Add to Cart</button>
       </div>
     );
   }

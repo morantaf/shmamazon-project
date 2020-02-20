@@ -9,6 +9,7 @@ export default class Navbar extends Component {
         <Link to="/">Home page</Link>
         <Link to="/category">Category</Link>
         <Link to="/product">Product</Link>
+        <Link to="/cart">Checkout</Link>
       </div>
     );
   }

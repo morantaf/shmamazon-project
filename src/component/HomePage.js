@@ -13,7 +13,7 @@ class HomePage extends Component {
     return (
       <div>
         {this.props.categories.map(category => (
-          <Link to={`/category/${category.id}`}>
+          <Link key={category.id} to={`/category/${category.id}`}>
             <Category
               key={category.id}
               name={category.name}

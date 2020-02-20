@@ -6,7 +6,7 @@ import { Route } from "react-router";
 import CategoryPage from "./component/CategoryPage";
 import ProductPage from "./component/ProductPage";
 import Footer from "./component/Footer";
-
+import CheckoutPage from "./component/CheckoutPage";
 function App() {
   return (
     <div className="App">
@@ -15,6 +15,7 @@ function App() {
       <Route path="/product/:id" component={ProductPage} />
       <Route path="/category/:id" component={CategoryPage} />
       <Route exact path="/" component={HomePage} />
+      <Route path="/cart" component={CheckoutPage} />
 
       <Footer />
     </div>
