@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { fetchProducts } from "../store/actions/products";
 import Product from "./Product";
 import M from "materialize-css";
-import { Link } from "react-router-dom";
 
 class CategoryPage extends Component {
   componentDidMount() {

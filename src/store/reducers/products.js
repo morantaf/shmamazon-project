@@ -36,6 +36,49 @@ export default function productsReducer(state = initialState, action) {
         };
       }
     }
+    case "REMOVE_ITEM": {
+      let itemToRemove = state.addedItems.find(item => action.id === item.id);
+      let new_items = state.addedItems.filter(item => action.id !== item.id);
+
+      //calculating the total
+      let newTotal =
+        state.total - parseInt(itemToRemove.price) * itemToRemove.quantity;
+      console.log(itemToRemove);
+      return {
+        ...state,
+        addedItems: new_items,
+        total: newTotal
+      };
+    }
+    case "ADD_QUANTITY": {
+      let addedItem = state.addedItems.find(item => item.id === action.id);
+      addedItem.quantity += 1;
+      let newTotal = state.total + parseInt(addedItem.price);
+      return {
+        ...state,
+        total: newTotal
+      };
+    }
+    case "SUB_QUANTITY": {
+      let addedItem = state.addedItems.find(item => item.id === action.id);
+      //if the qt == 0 then it should be removed
+      if (addedItem.quantity === 1) {
+        let new_items = state.addedItems.filter(item => item.id !== action.id);
+        let newTotal = state.total - parseInt(addedItem.price);
+        return {
+          ...state,
+          addedItems: new_items,
+          total: newTotal
+        };
+      } else {
+        addedItem.quantity -= 1;
+        let newTotal = state.total - parseInt(addedItem.price);
+        return {
+          ...state,
+          total: newTotal
+        };
+      }
+    }
     default: {
       return state;
     }
