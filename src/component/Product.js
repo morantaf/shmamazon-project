@@ -16,8 +16,9 @@ class Product extends Component {
         <div className="card-image">
           <Link key={this.props.id} to={`/product/${this.props.id}`}>
             <img src={this.props.img} alt={this.props.name} />
+            <span className="card-title">{this.props.name}</span>
           </Link>
-          <span className="card-title">{this.props.name}</span>
+
           <span
             to="/"
             className="btn-floating halfway-fab waves-effect waves-light red"

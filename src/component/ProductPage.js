@@ -4,6 +4,7 @@ import { fetchProducts } from "../store/actions/products";
 import { addToCart } from "../store/actions/cartActions";
 import Reviews from "./Reviews";
 import ReviewForm from "./ReviewForm";
+import "./ProductPage.css";
 
 class ProductPage extends Component {
   componentDidMount() {
@@ -32,13 +33,20 @@ class ProductPage extends Component {
       <div>
         <div className="productSection">
           <div>
-            <img src={product.imageUrl} />
+            <img className="productPageImg" src={product.imageUrl} />
           </div>
           <div className="detailsSection">
             <h1>{product.name}</h1>
             <h4>{product.price}€</h4>
             <h4>{product.inStock ? "In stock" : "Sold Out"}</h4>
-
+            <button
+              onClick={() => {
+                this.handleClick(productId);
+              }}
+            >
+              {" "}
+              add to cart
+            </button>
             <span
               to="/"
               className="btn-floating halfway-fab waves-effect waves-light red"
