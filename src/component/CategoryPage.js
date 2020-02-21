@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchProducts } from "../store/actions/products";
 import Product from "./Product";
 import M from "materialize-css";
+import { Link } from "react-router-dom";
 
 class CategoryPage extends Component {
   componentDidMount() {
@@ -22,7 +23,7 @@ class CategoryPage extends Component {
         <div className="box">
           {filteredProducts.map(product => (
             <div>
-              {/* {console.log(product.id)} */}
+              <Link key={product.id} to={`/product/${product.id}`}>
               <Product
                 name={product.name}
                 price={product.price}
@@ -31,6 +32,7 @@ class CategoryPage extends Component {
                 key={product.id}
                 id={product.id}
               />
+              </Link>
             </div>
           ))}
         </div>
@@ -41,7 +43,7 @@ class CategoryPage extends Component {
 
 function mapStateToProps(reduxState) {
   return {
-    products: reduxState.products
+    products: reduxState.products.list
   };
 }
 

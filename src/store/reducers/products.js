@@ -1,7 +1,8 @@
 const initialState = {
   products: [],
   addedItems: [],
-  total: 0
+  total: 0,
+  selectedProduct: null
 };
 
 export default function productsReducer(state = initialState, action) {
@@ -10,6 +11,11 @@ export default function productsReducer(state = initialState, action) {
       console.log("is type fetch_product", state);
       return { ...initialState, products: action.payload };
     }
+    case "FETCH_PRODUCT_BY_ID": {
+      return {
+        ...state,
+        selectedProduct: action.payload
+    };
     case "ADD_TO_CART": {
       console.log(state.total);
       console.log(state.addedItems);

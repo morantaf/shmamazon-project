@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchCategories } from "../store/actions/categoryAction";
+import { fetchCategories } from "../store/actions/categories";
 import Category from "./Category";
 import { Link } from "react-router-dom";
 
