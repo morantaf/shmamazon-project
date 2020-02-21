@@ -17,11 +17,14 @@ class ProductPage extends Component {
   };
 
   render() {
-    const product = this.props.product;
     const productId = parseInt(this.props.match.params.id);
+    const product = this.props.products.find(
+      product => product.id === productId
+    );
     const filteredProductReviews = this.props.productReviews.filter(
       review => review.productId === productId
     );
+    console.log(this.props.products);
 
     if (!product) {
       return <div>Loading...</div>;
@@ -68,7 +71,7 @@ class ProductPage extends Component {
 
 function mapStateToProps(reduxState) {
   return {
-    product: reduxState.products.selectedProduct,
+    products: reduxState.products.products,
     productReviews: reduxState.reviews.productReviews
   };
 }

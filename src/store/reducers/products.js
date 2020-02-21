@@ -1,20 +1,13 @@
 const initialState = {
   products: [],
   addedItems: [],
-  total: 0,
-  selectedProduct: null
+  total: 0
 };
 
 export default function productsReducer(state = initialState, action) {
   switch (action.type) {
     case "FETCH_PRODUCTS": {
       return { ...initialState, products: action.payload };
-    }
-    case "FETCH_PRODUCT_BY_ID": {
-      return {
-        ...state,
-        selectedProduct: action.payload
-      };
     }
     case "ADD_TO_CART": {
       let addedItem = state.products.find(item => item.id === action.id);
