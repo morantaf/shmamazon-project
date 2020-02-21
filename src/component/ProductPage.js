@@ -33,7 +33,11 @@ class ProductPage extends Component {
       <div>
         <div className="productSection">
           <div>
-            <img className="productPageImg" src={product.imageUrl} />
+            <img
+              className="productPageImg"
+              src={product.imageUrl}
+              alt={product.name}
+            />
           </div>
           <div className="detailsSection">
             <h1>{product.name}</h1>
