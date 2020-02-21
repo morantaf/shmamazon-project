@@ -11,6 +11,11 @@ class Navbar extends Component {
       <div>
         <nav className="nav-wrapper">
           <div className="container">
+            <ul className="left">
+              <li>
+                <Link to="/">SHMAMAZON</Link>
+              </li>
+            </ul>
             <ul className="right">
               <li>
                 <Link to="/">Home page</Link>
