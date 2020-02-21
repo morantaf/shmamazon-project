@@ -10,6 +10,7 @@ export default function categoriesReducer(
     case "FETCH_CATEGORIES": {
       return action.payload;
     }
+
     default: {
       return state;
     }

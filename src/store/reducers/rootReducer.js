@@ -1,17 +1,10 @@
 import { combineReducers } from "redux";
 import categoriesReducer from "./categories";
-import productsReducer from "./products.js";
+import productsReducer from "./products";
+import cartReducer from "./cartReducer";
 
 export default combineReducers({
-  hello: helloReducer,
   categories: categoriesReducer,
-  products: productsReducer
+  products: productsReducer,
+  cart: cartReducer
 });
-
-function helloReducer(state = "hello", action) {
-  switch (action.type) {
-    default: {
-      return state;
-    }
-  }
-}

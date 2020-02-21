@@ -1,22 +1,50 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import M from "materialize-css";
 
-export default class Navbar extends Component {
+class Navbar extends Component {
   render() {
+    const quantity = this.props.addedItems.map(item => item.quantity);
+    const itemCount = quantity.reduce((acc, curr) => acc + curr, 0);
+    console.log(itemCount);
     return (
       <div>
-        <Link to="/">Home page</Link>
-        <Link to="/category">Category</Link>
-        <Link to="/product">Product</Link>
-        <Link to="/cart">Checkout</Link>
+        <nav className="nav-wrapper">
+          <div className="container">
+            <ul className="right">
+              <li>
+                <Link to="/">Home page</Link>
+              </li>
+              <li>
+                <Link to="/category">Category</Link>
+              </li>
+              <li>
+                <Link to="/product">Product</Link>
+              </li>
+              <li>
+                <Link to="/cart">Checkout</Link>
+              </li>
+              <li>
+                <Link to="/cart">My cart</Link>
+              </li>
+              <li>
+                <Link to="/cart">
+                  <i className="material-icons">shopping_cart</i>
+                </Link>
+              </li>
+              <li>{itemCount}</li>
+            </ul>
+          </div>
+        </nav>
       </div>
     );
   }
 }
 
 function mapStateToProps(reduxState) {
-  return {};
+  console.log("navbar state", reduxState);
+  return { addedItems: reduxState.products.addedItems };
 }
 
-connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps)(Navbar);
