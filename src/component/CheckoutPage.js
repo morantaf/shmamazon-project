@@ -6,6 +6,7 @@ import {
   addQuantity,
   subtractQuantity
 } from "../store/actions/cartActions";
+import "./CheckoutPage.css";
 
 class CheckoutPage extends Component {
   //to remove the item completely
@@ -27,48 +28,57 @@ class CheckoutPage extends Component {
       this.props.addedItems.map(item => {
         return (
           <li className="collection-item avatar" key={item.id}>
-            <div className="item-img">
-              <img src={item.imageUrl} alt={item.imageUrl} className="" />
-            </div>
-
-            <div className="item-desc">
-              <span className="title">{item.name}</span>
-              <p>
-                <b>Price: {parseInt(item.price)}$</b>
-              </p>
-              <p>
-                <b>Quantity: {item.quantity}</b>
-              </p>
-              <div className="add-remove">
-                <Link to="/cart">
-                  <i
-                    className="material-icons"
-                    onClick={() => {
-                      this.handleAddQuantity(item.id);
-                    }}
-                  >
-                    arrow_drop_up
-                  </i>
-                </Link>
-                <Link to="/cart">
-                  <i
-                    className="material-icons"
-                    onClick={() => {
-                      this.handleSubtractQuantity(item.id);
-                    }}
-                  >
-                    arrow_drop_down
-                  </i>
-                </Link>
+            <div className="cartItem">
+              <div className="item-img">
+                <img
+                  src={item.imageUrl}
+                  alt={item.imageUrl}
+                  className="cartImg"
+                />
               </div>
-              <button
-                className="waves-effect waves-light btn pink remove"
-                onClick={() => {
-                  this.handleRemove(item.id);
-                }}
-              >
-                Remove
-              </button>
+
+              <div className="item-desc-button">
+                <div className="item-desc">
+                  <span className="title">{item.name}</span>
+                  <p>
+                    <b>Price: {parseInt(item.price)}$</b>
+                  </p>
+                  <p>
+                    <b>Quantity: {item.quantity}</b>
+                  </p>
+                  <div className="add-remove">
+                    <Link to="/cart">
+                      <i
+                        className="material-icons"
+                        onClick={() => {
+                          this.handleAddQuantity(item.id);
+                        }}
+                      >
+                        arrow_drop_up
+                      </i>
+                    </Link>
+                    <Link to="/cart">
+                      <i
+                        className="material-icons"
+                        onClick={() => {
+                          this.handleSubtractQuantity(item.id);
+                        }}
+                      >
+                        arrow_drop_down
+                      </i>
+                    </Link>
+                  </div>
+                </div>
+
+                <button
+                  className="waves-effect waves-light btn pink remove"
+                  onClick={() => {
+                    this.handleRemove(item.id);
+                  }}
+                >
+                  Remove
+                </button>
+              </div>
             </div>
           </li>
         );

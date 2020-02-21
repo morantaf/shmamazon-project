@@ -1,0 +1,19 @@
+.item-img {
+  height: 40vh;
+}
+
+.cartImg {
+  height: 100%;
+}
+
+.cartItem {
+  display: flex;
+}
+
+.item-desc-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

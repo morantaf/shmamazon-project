@@ -7,7 +7,7 @@ const initialState = {
 export default function productsReducer(state = initialState, action) {
   switch (action.type) {
     case "FETCH_PRODUCTS": {
-      return { ...initialState, products: action.payload };
+      return { ...state, products: action.payload };
     }
     case "ADD_TO_CART": {
       let addedItem = state.products.find(item => item.id === action.id);
