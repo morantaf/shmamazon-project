@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchProductById } from "../store/actions/products";
+import { fetchProductById, fetchProducts } from "../store/actions/products";
+import { addToCart } from "../store/actions/cartActions";
 import Reviews from "./Reviews";
 import ReviewForm from "./ReviewForm";
 
 class ProductPage extends Component {
   componentDidMount() {
-    const pageID = this.props.match.params.id;
-    this.props.dispatch(fetchProductById(pageID));
+    // const pageID = this.props.match.params.id;
+    // this.props.fetchProductById(pageID);
+    this.props.fetchProducts();
   }
+
+  handleClick = id => {
+    this.props.addToCart(id);
+  };
 
   render() {
     const product = this.props.product;
@@ -32,7 +38,15 @@ class ProductPage extends Component {
             <h4>{product.price}€</h4>
             <h4>{product.inStock ? "In stock" : "Sold Out"}</h4>
 
-            <button>Add to cart</button>
+            <span
+              to="/"
+              className="btn-floating halfway-fab waves-effect waves-light red"
+              onClick={() => {
+                this.handleClick(productId);
+              }}
+            >
+              <i className="material-icons">add</i>
+            </span>
           </div>
         </div>
         <div>
@@ -40,8 +54,6 @@ class ProductPage extends Component {
           {filteredProductReviews.length === 0
             ? "No comment yet"
             : filteredProductReviews.map(review => {
-                console.log("render review:", review);
-
                 return (
                   <Reviews name={review.customerName} comment={review.review} />
                 );
@@ -61,4 +73,15 @@ function mapStateToProps(reduxState) {
   };
 }
 
-export default connect(mapStateToProps)(ProductPage);
+const mapDispatchToProps = dispatch => {
+  return {
+    addToCart: id => {
+      dispatch(addToCart(id));
+    },
+    fetchProducts: () => {
+      dispatch(fetchProducts);
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);

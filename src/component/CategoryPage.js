@@ -13,8 +13,7 @@ class CategoryPage extends Component {
   render() {
     const pageID = this.props.match.params.id;
 
-    console.log("props prodcuts", this.props.products);
-    const filteredProducts = this.props.products.products.filter(product => {
+    const filteredProducts = this.props.products.filter(product => {
       return product.categoryId === parseInt(pageID);
     });
     return (
@@ -23,7 +22,6 @@ class CategoryPage extends Component {
         <div className="box">
           {filteredProducts.map(product => (
             <div>
-              <Link key={product.id} to={`/product/${product.id}`}>
               <Product
                 name={product.name}
                 price={product.price}
@@ -32,7 +30,6 @@ class CategoryPage extends Component {
                 key={product.id}
                 id={product.id}
               />
-              </Link>
             </div>
           ))}
         </div>
@@ -43,7 +40,7 @@ class CategoryPage extends Component {
 
 function mapStateToProps(reduxState) {
   return {
-    products: reduxState.products.list
+    products: reduxState.products.products
   };
 }
 

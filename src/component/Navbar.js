@@ -7,7 +7,6 @@ class Navbar extends Component {
   render() {
     const quantity = this.props.addedItems.map(item => item.quantity);
     const itemCount = quantity.reduce((acc, curr) => acc + curr, 0);
-    console.log(itemCount);
     return (
       <div>
         <nav className="nav-wrapper">
@@ -43,7 +42,6 @@ class Navbar extends Component {
 }
 
 function mapStateToProps(reduxState) {
-  console.log("navbar state", reduxState);
   return { addedItems: reduxState.products.addedItems };
 }
 

@@ -2,20 +2,21 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addToCart } from "../store/actions/cartActions";
 import M from "materialize-css";
+import { Link } from "react-router-dom";
 
 class Product extends Component {
   handleClick = id => {
-    // console.log("i am clicked this is my id", id);
     this.props.addToCart(id);
   };
 
   render() {
     return (
       <div>
-        {/* {console.log("i am a prop id key", this.props.id)} */}
         <div className="card" key={this.props.key}>
           <div className="card-image">
-            <img src={this.props.img} alt={this.props.name} />
+            <Link key={this.props.id} to={`/product/${this.props.id}`}>
+              <img src={this.props.img} alt={this.props.name} />
+            </Link>
             <span className="card-title">{this.props.name}</span>
             <span
               to="/"

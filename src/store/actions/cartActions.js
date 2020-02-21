@@ -3,7 +3,7 @@ export const ADD_TO_CART = "ADD_TO_CART";
 //add cart action
 
 export const addToCart = id => {
-  // console.log("add to cart is called", id);
+  console.log("action ADD_TO_CART created with id", id);
   return {
     type: "ADD_TO_CART",
     id
