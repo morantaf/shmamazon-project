@@ -3,160 +3,160 @@
     {
       "id": 1,
       "categoryId": 4,
-      "name": "Product 1",
-      "imageUrl": "https://picsum.photos/400?image=696",
+      "name": "ASUS ROG STRIX GeForce RTX 2070 SUPER",
+      "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/37/79/LD0005377967_2.jpg",
       "inStock": true,
       "price": "3432"
     },
     {
       "id": 2,
       "categoryId": 1,
-      "name": "Product 2",
-      "imageUrl": "https://picsum.photos/400?image=230",
+      "name": "AMD Ryzen 9 3900X 12-core",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71S31CWSs3L._AC_SL1093_.jpg",
       "inStock": false,
       "price": "2374"
     },
     {
       "id": 3,
       "categoryId": 4,
-      "name": "Product 3",
-      "imageUrl": "https://picsum.photos/400?image=277",
+      "name": "ASUS ROG STRIX GeForce RTX 2080TI",
+      "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/06/88/LD0005068878_2.jpg",
       "inStock": false,
       "price": "1942"
     },
     {
       "id": 4,
       "categoryId": 3,
-      "name": "Product 4",
-      "imageUrl": "https://picsum.photos/400?image=963",
+      "name": "MSI MPG X570 Gaming PRO Carbon WiFi Motherboard",
+      "imageUrl": "https://asset.msi.com/resize/image/global/product/product_8_20190723095408_5d3668c0f384e.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
       "inStock": true,
       "price": "2367"
     },
     {
       "id": 5,
       "categoryId": 3,
-      "name": "Product 5",
-      "imageUrl": "https://picsum.photos/400?image=637",
+      "name": "MSI MEG X570 ACE Motherboard",
+      "imageUrl": "https://asset.msi.com/resize/image/global/product/product_6_20190723092258_5d36617274da8.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
       "inStock": false,
       "price": "1991"
     },
     {
       "id": 6,
       "categoryId": 3,
-      "name": "Product 6",
-      "imageUrl": "https://picsum.photos/400?image=811",
+      "name": "MSI Z390-A PRO LGA1151",
+      "imageUrl": "https://s.s-bol.com/imgbase0/imagebase3/large/FC/2/7/7/3/9200000100213772.jpg",
       "inStock": true,
       "price": "1956"
     },
     {
       "id": 7,
       "categoryId": 2,
-      "name": "Product 7",
-      "imageUrl": "https://picsum.photos/400?image=616",
+      "name": "Seagate Exos X16 14TB 7200 RPM SATA",
+      "imageUrl": "https://www.shoppingexpress.com.au/assets/full/ST14000NM001G.jpg?1569814152",
       "inStock": false,
       "price": "2005"
     },
     {
       "id": 8,
       "categoryId": 4,
-      "name": "Product 8",
-      "imageUrl": "https://picsum.photos/400?image=522",
+      "name": "EVGA GeForce GTX 1660 Super",
+      "imageUrl": "https://ic.tweakimg.net/ext/i/2003173424.jpeg",
       "inStock": false,
       "price": "1358"
     },
     {
       "id": 9,
       "categoryId": 3,
-      "name": "Product 9",
-      "imageUrl": "https://picsum.photos/400?image=615",
+      "name": "MSI Meg X570 Unify Motherboard",
+      "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1_20190927094619_5d8d69eb70536.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
       "inStock": false,
       "price": "2345"
     },
     {
       "id": 10,
       "categoryId": 1,
-      "name": "Product 10",
-      "imageUrl": "https://picsum.photos/400?image=601",
+      "name": "Intel Core i7-8700K Desktop Processor 6 Cores",
+      "imageUrl": "https://c1.neweggimages.com/ProductImage/19-117-827-Z01.jpg",
       "inStock": false,
       "price": "1823"
     },
     {
       "id": 11,
       "categoryId": 1,
-      "name": "Product 11",
-      "imageUrl": "https://picsum.photos/400?image=314",
+      "name": "Intel Xeon E3-1270 Processors BX80677E31270V6",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/610Mg0sOcVL._AC_SX466_.jpg",
       "inStock": true,
       "price": "1752"
     },
     {
       "id": 12,
       "categoryId": 4,
-      "name": "Product 12",
-      "imageUrl": "https://picsum.photos/400?image=442",
+      "name": "XFX AMD Radeon VII",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51KnLEXO5hL._AC_SX466_.jpg",
       "inStock": true,
       "price": "2196"
     },
     {
       "id": 13,
       "categoryId": 4,
-      "name": "Product 13",
-      "imageUrl": "https://picsum.photos/400?image=338",
+      "name": "ZOTAC Gaming GeForce RTX 2070 Super",
+      "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/42/93/LD0005429362_2.jpg",
       "inStock": true,
       "price": "3276"
     },
     {
       "id": 14,
       "categoryId": 4,
-      "name": "Product 14",
-      "imageUrl": "https://picsum.photos/400?image=739",
+      "name": "PowerColor Red Devil Radeon RX 5700 XT",
+      "imageUrl": "https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/2/9/1/8/9200000119508192.jpg",
       "inStock": false,
       "price": "1454"
     },
     {
       "id": 15,
-      "categoryId": 4,
-      "name": "Product 15",
-      "imageUrl": "https://picsum.photos/400?image=901",
+      "categoryId": 2,
+      "name": "WD 4TB Elements Portable External Hard Drive - USB 3.0 - WDBU6Y0040BBK-WESN",
+      "imageUrl": "https://images.kogan.com/image/fetch/s--DfzQQ1eM--/b_white,c_pad,f_auto,h_502,q_auto:good,w_753/https://assets.kogan.com/files/product/WD-WDBUZG0010BBK-PESN/WD-WDBUZG0010BBK-PESN-hires.jpg",
       "inStock": false,
       "price": "1368"
     },
     {
       "id": 16,
       "categoryId": 3,
-      "name": "Product 16",
-      "imageUrl": "https://picsum.photos/400?image=372",
+      "name": "GIGABYTE H370 AORUS Gaming 3 WiFi",
+      "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/04/83/85/LD0004838584_2.jpg",
       "inStock": false,
       "price": "2087"
     },
     {
       "id": 17,
-      "categoryId": 1,
-      "name": "Product 17",
-      "imageUrl": "https://picsum.photos/400?image=264",
+      "categoryId": 2,
+      "name": "G-Technology 10TB G-DRIVE USB-C (USB 3.1 Gen 1) Desktop External Hard Drive - 0G05678",
+      "imageUrl": "https://static.bhphoto.com/images/images750x750/1493117643_1333860.jpg",
       "inStock": true,
       "price": "2523"
     },
     {
       "id": 18,
       "categoryId": 1,
-      "name": "Product 18",
-      "imageUrl": "https://picsum.photos/400?image=133",
+      "name": "EVGA GeForce RTX 2060 KO Gaming",
+      "imageUrl": "https://www.media-rdc.com/medias/e752addf6420344da3058bdf2ffd6903/p_580x580/v1.jpg",
       "inStock": true,
       "price": "1118"
     },
     {
       "id": 19,
       "categoryId": 2,
-      "name": "Product 19",
-      "imageUrl": "https://picsum.photos/400?image=359",
+      "name": "WD_Black 5TB P10 Game Drive, External Hard Drive - WDBA3A0050BBK-WESN",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/91nz8ViqVLL._AC_SX466_.jpg",
       "inStock": false,
       "price": "1966"
     },
     {
       "id": 20,
       "categoryId": 1,
-      "name": "Product 20",
-      "imageUrl": "https://picsum.photos/400?image=354",
+      "name": "Z6G4 Xeon 4108 1.8 2400 8C CPU",
+      "imageUrl": "https://www.comx.co.za/i/DEll/193026_IMG1.jpg",
       "inStock": false,
       "price": "2569"
     }
@@ -164,23 +164,23 @@
   "categories": [
     {
       "id": 1,
-      "name": "Category 1",
-      "imageUrl": "https://picsum.photos/400?image=372"
+      "name": "CPU",
+      "imageUrl": "https://www.media-rdc.com/medias/e752addf6420344da3058bdf2ffd6903/p_580x580/v1.jpg"
     },
     {
       "id": 2,
-      "name": "Category 2",
-      "imageUrl": "https://picsum.photos/400?image=354"
+      "name": "Motherboard",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/91nz8ViqVLL._AC_SX466_.jpg"
     },
     {
       "id": 3,
-      "name": "Category 3",
-      "imageUrl": "https://picsum.photos/400?image=133"
+      "name": "Hard Drive",
+      "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/04/83/85/LD0004838584_2.jpg"
     },
     {
       "id": 4,
-      "name": "Category 4",
-      "imageUrl": "https://i.picsum.photos/id/133/400/400.jpg"
+      "name": "Graphic Card",
+      "imageUrl": "https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/2/9/1/8/9200000119508192.jpg"
     }
   ]
 }
