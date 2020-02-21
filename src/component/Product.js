@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { addToCart } from "../store/actions/cartActions";
 import M from "materialize-css";
 import { Link } from "react-router-dom";
+import "./Product.css";
 
 class Product extends Component {
   handleClick = id => {
@@ -11,30 +12,28 @@ class Product extends Component {
 
   render() {
     return (
-      <div>
-        <div className="card" key={this.props.key}>
-          <div className="card-image">
-            <Link key={this.props.id} to={`/product/${this.props.id}`}>
-              <img src={this.props.img} alt={this.props.name} />
-            </Link>
-            <span className="card-title">{this.props.name}</span>
-            <span
-              to="/"
-              className="btn-floating halfway-fab waves-effect waves-light red"
-              onClick={() => {
-                this.handleClick(this.props.id);
-              }}
-            >
-              <i className="material-icons">add</i>
-            </span>
-          </div>
+      <div className="card" key={this.props.key}>
+        <div className="card-image">
+          <Link key={this.props.id} to={`/product/${this.props.id}`}>
+            <img src={this.props.img} alt={this.props.name} />
+          </Link>
+          <span className="card-title">{this.props.name}</span>
+          <span
+            to="/"
+            className="btn-floating halfway-fab waves-effect waves-light red"
+            onClick={() => {
+              this.handleClick(this.props.id);
+            }}
+          >
+            <i className="material-icons">add</i>
+          </span>
+        </div>
 
-          <div className="card-content">
-            <p>description</p>
-            <p>
-              <b>Price: {this.props.price}$</b>
-            </p>
-          </div>
+        <div className="card-content">
+          <p>description</p>
+          <p>
+            <b>Price: {this.props.price}$</b>
+          </p>
         </div>
       </div>
     );

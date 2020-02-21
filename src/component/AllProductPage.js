@@ -2,25 +2,18 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchProducts } from "../store/actions/products";
 import Product from "./Product";
-import M from "materialize-css";
-import "./CategoryPage.css";
 
-class CategoryPage extends Component {
+class AllProductPage extends Component {
   componentDidMount() {
     this.props.dispatch(fetchProducts);
   }
 
   render() {
-    const pageID = this.props.match.params.id;
-
-    const filteredProducts = this.props.products.filter(product => {
-      return product.categoryId === parseInt(pageID);
-    });
     return (
       <div className="container">
         <h3 className="center">Our items</h3>
         <div className="box">
-          {filteredProducts.map(product => (
+          {this.props.products.map(product => (
             <Product
               name={product.name}
               price={product.price}
@@ -42,4 +35,4 @@ function mapStateToProps(reduxState) {
   };
 }
 
-export default connect(mapStateToProps)(CategoryPage);
+export default connect(mapStateToProps)(AllProductPage);

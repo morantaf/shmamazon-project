@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchProductById, fetchProducts } from "../store/actions/products";
+import { fetchProducts } from "../store/actions/products";
 import { addToCart } from "../store/actions/cartActions";
 import Reviews from "./Reviews";
 import ReviewForm from "./ReviewForm";
 
 class ProductPage extends Component {
   componentDidMount() {
-    // const pageID = this.props.match.params.id;
-    // this.props.fetchProductById(pageID);
     this.props.fetchProducts();
   }
 
